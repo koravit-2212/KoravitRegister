@@ -10,17 +10,16 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // เลือกฟอร์มทั้งหมดที่มี class 'needs-validation'
             var forms = document.querySelectorAll(".needs-validation");
             Array.prototype.slice.call(forms).forEach(function (form) {
                 form.addEventListener(
                     "submit",
                     function (event) {
                         if (!form.checkValidity()) {
-                            event.preventDefault(); // หยุดการ submit ถ้าฟอร์มไม่ผ่าน
+                            event.preventDefault(); 
                             event.stopPropagation();
                         }
-                        form.classList.add("was-validated"); // เพิ่ม class เพื่อแสดง invalid-feedback
+                        form.classList.add("was-validated"); 
                     },
                     false
                 );
